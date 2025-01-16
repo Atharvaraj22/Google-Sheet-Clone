@@ -1,0 +1,213 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main Layout */
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header Section */
+.header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-content {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-menu:hover {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+}
+
+.nav-active {
+    background-color: #1a73e8;
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* Toolbar Section */
+.cell-styles {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cell-styles > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    height: 35px;
+    background-color: #f1f3f4;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell-styles > *:hover {
+    background-color: #e8f0fe;
+    transform: scale(1.05);
+}
+
+.cell-styles select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Active Cell and Formula Bar */
+.active-cell-data {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #f1f3f4;
+    border-radius: 4px;
+}
+
+.address-bar {
+    padding: 5px 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.formula-bar {
+    flex-grow: 1;
+    padding: 5px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Grid Section */
+.grid {
+    flex-grow: 1;
+    overflow: auto;
+    background-color: #f9fafb;
+    padding: 20px;
+}
+
+.grid-header {
+    display: flex;
+    background-color: #e8f0fe;
+    border: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.grid-header-col {
+    padding: 10px;
+    min-width: 100px;
+    font-weight: bold;
+    text-align: center;
+    border-right: 1px solid #ddd;
+}
+
+.row {
+    display: flex;
+    width: fit-content;
+}
+
+.grid-cell {
+    padding: 10px;
+    min-width: 100px;
+    text-align: left;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.grid-cell:hover {
+    background-color: #e8f0fe;
+}
+
+/* Footer Section */
+.footer {
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+}
+
+.new-sheet {
+    padding: 10px 15px;
+    background-color: #1a73e8;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.new-sheet:hover {
+    background-color: #155ab3;
+    transform: scale(1.05);
+}
+
+.sheet-menu {
+    padding: 8px 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.active-sheet {
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+}
+
+.sheet-menu:hover {
+    background-color: #e8f0fe;
+}

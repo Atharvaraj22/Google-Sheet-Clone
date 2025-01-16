@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/281/281761.png" type="image/x-icon">
+    <title>Google Sheets Clone</title>
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <!-- Header Section -->
+        <header class="header">
+            <!-- Navigation Bar -->
+            <nav class="nav-content">
+                <button class="nav-menu">File</button>
+                <button class="nav-menu nav-active">Home</button>
+                <button class="nav-menu">Insert</button>
+                <button class="nav-menu">Layout</button>
+                <button class="nav-menu">Help</button>
+            </nav>
+
+            <!-- Toolbar -->
+            <section class="cell-styles">
+                <button class="material-icons copy" title="Copy">content_copy</button>
+                <button class="material-icons cut" title="Cut">content_cut</button>
+                <button class="material-icons paste" title="Paste">content_paste</button>
+
+                <select onchange="setFont(this)" class="font-family-selection font-family select" title="Select Font">
+                    <option value="monospace">Monospace</option>
+                    <option value="sans-serif">Sans-serif</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="cursive">Cursive</option>
+                </select>
+
+                <select onchange="setSize(this)" class="font-size-selection font-size select" title="Font Size">
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                </select>
+
+                <button class="material-icons bold" title="Bold">format_bold</button>
+                <button class="material-icons italic" title="Italic">format_italic</button>
+                <button class="material-icons underline" title="Underline">format_underlined</button>
+
+                <button class="start material-icons alignment" title="Align Left">format_align_left</button>
+                <button class="center material-icons alignment" title="Align Center">format_align_center</button>
+                <button class="end material-icons alignment" title="Align Right">format_align_right</button>
+
+                <label class="color-prop" title="Text Color">
+                    <span class="material-icons">format_color_text</span>
+                    <input onchange="textColor(this)" type="color" id="color" class="font-color-prop">
+                </label>
+
+                <label class="color-prop" title="Background Color">
+                    <span class="material-icons">format_color_fill</span>
+                    <input onchange="backgroundColor(this)" type="color" id="bgcolor" class="BGcolor-prop">
+                </label>
+
+                <button class="material-icons download" title="Download">cloud_download</button>
+                <button class="material-icons open" title="Upload">cloud_upload</button>
+            </section>
+
+            <!-- Formula Bar -->
+            <div class="active-cell-data">
+                <b id="active_cell" class="address-bar" title="Active Cell">Null</b>
+                <img class="formula-icon" src="https://img.icons8.com/ios/50/000000/formula-fx.png" alt="Formula">
+                <input type="text" class="formula-bar" placeholder="Enter formula here" aria-label="Formula Bar">
+            </div>
+        </header>
+
+        <!-- Spreadsheet Grid -->
+        <main class="grid">
+            <div class="grid-header"></div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <button class="material-icons new-sheet" title="Add New Sheet">post_add</button>
+        </footer>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="script.js"></script>
+    <script src="sheet.js"></script>
+    <script src="functionalities.js"></script>
+</body>
+</html>
